@@ -9,6 +9,7 @@ import streamlit as st
 def run():
  st.title("to je aplikacija KALKULATOR VISKOZNOSTI IN KOLIČINE")
  st.write("v tem programu vpišete zaključno maso in viskoznost ter program bo izračunal viskoznost in količine dveh surovin")
+ st.write("če program ne dela pritisnite na gumb RESETIRAJ MODEL ")
  # ---------- reset button ----------
  if st.button("Resetiraj model"):
     if "model" in st.session_state:
@@ -99,5 +100,6 @@ def run():
     st.write(f"**Viskoznost EVA 33-45:** {y2:.2f}")
     st.write(f"**EVA 33-400:** {x1:.2f} kg ({p1:.2f}%)")
     st.write(f"**EVA 33-45:** {x2:.2f} kg ({p2:.2f}%)")
+
 
 
