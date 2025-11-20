@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -14,7 +13,7 @@ def run():
  if st.button("Resetiraj model"):
     if "model" in st.session_state:
         del st.session_state["model"]
-    st.success("Model je bil resetiran. Ob naslednjem zagonu se bo ponovno treniral.")
+    st.success("Model je bil resetiran.")
  
  def load_data(path: str):
     df = pd.read_excel(path)

@@ -9,7 +9,7 @@ from keras.callbacks import EarlyStopping
 
 def run():
     st.title("To je aplikacija izracun_kolicine")
-    st.write("v tej aplikaciji vnesete podatke o zaključni masi in viskoznosti ter viskoznost dve surovin, in program vrne količino dveh surovin")
+    st.write("v tej aplikaciji vnesete podatke o zaključni masi in viskoznosti ter viskoznost dveh surovin, in program vrne količino dveh surovin")
     # ---------- resset button ----------
     if st.button("Resetiraj model"):
         if "model" in st.session_state:
@@ -71,10 +71,10 @@ def run():
         model.add  (Dense(4))
         model.compile(optimizer='adam', loss='mse')
 
-
+    
 
         early_stop=EarlyStopping( monitor="val_loss",patience=100,restore_best_weights=True)
-        model.fit(X_train, y_train, epochs=500, batch_size=4,validation_data=(X_test, y_test), verbose=1,callbacks=[early_stop])
+        model.fit(X_train, y_train, epochs=500, batch_size=4,validation_data=(X_test, y_test), verbose=0,callbacks=[early_stop])
 
         st.session_state.model=model
     else:

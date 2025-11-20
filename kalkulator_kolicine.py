@@ -1,4 +1,3 @@
-
 import pandas as pd
 import numpy as np
 from sklearn.model_selection import train_test_split
@@ -9,13 +8,14 @@ import streamlit as st
  
 def run():
  st.title("to je aplikacija kalkulator_količine")
- st.write("v tej aplikaciji vnesete podatke o zaključni masi,viskoznosti ter viskoznost dve surovin in program vrne kolicino dveh teh dveh surovin")
+ st.write("v tej aplikaciji vnesete podatke o zaključni masi,viskoznosti ter viskoznost dveh surovin in program vrne kolicino dveh teh dveh surovin")
+ st.write("če program ne dela pritisnite na gumb RESETIRAJ MODEL ")
 
-#------reset button-------------
+#------reset button------------- 
  if st.button("Resetiraj model"):
     if "model" in st.session_state:
         del st.session_state["model"]
-    st.success("Model je bil resetiran. Ob naslednjem zagonu se bo ponovno treniral.")
+    st.success("Model je bil resetiran.")
  
  def load_data(path: str):
     df = pd.read_excel(path)
