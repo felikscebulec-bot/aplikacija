@@ -10,8 +10,9 @@ from keras.callbacks import EarlyStopping
 
 
 def run():
-    st.title("To je aplikacija izracuna_sestavino")
+    st.title("To je aplikacija izracun_sestavin")
     st.write("v tem programu vpišete zaključno maso in viskoznost ter program bo izračunal viskoznost in količine dveh surovin")
+    st.write("če program ne dela pritisnite na gumb RESETIRAJ MODEL ")
     # ---------- resset ----------
     if st.button("Resetiraj model"):
         if "model" in st.session_state:
